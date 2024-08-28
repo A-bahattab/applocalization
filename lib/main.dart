@@ -31,11 +31,13 @@ class MyApp extends StatelessWidget {
             localizationsDelegates: AppLocalizations.localizationsDelegates,
             title: 'Localization',
             theme: ThemeData(
+                useMaterial3: false,
                 colorScheme: ColorScheme.fromSwatch().copyWith(
-              primary: Color(Provider.of<SettingProvider>(context).themeClr ??
-                  SharedPref.themeClr ??
-                  Colors.blue.value),
-            )),
+                  primary: Color(
+                      Provider.of<SettingProvider>(context).themeClr ??
+                          SharedPref.themeClr ??
+                          Colors.blue.value),
+                )),
             home: const HomePage(),
           );
         },
